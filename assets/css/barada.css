@@ -1,0 +1,157 @@
+  .about-container {
+     padding-inline: 16px; 
+     margin-top: 10%;
+    }
+  .about-100 { width: 100%; }
+  .section-title { margin-block-end: 16px; }
+  .grid-list-about {
+    display: grid;
+    gap: 30px;
+  }
+  [data-reveal] {
+    opacity: 0;
+    transition: 0.75s ease;
+  }
+  [data-reveal="top"] { transform: translateY(-30px); }
+  [data-reveal="bottom"] { transform: translateY(30px); }
+  [data-reveal="left"] { transform: translateX(-30px); }
+  [data-reveal="right"] { transform: translateX(30px); }
+  [data-reveal].revealed {
+    transform: translate(0);
+    opacity: 1;
+  }
+  .about-her {
+    margin-top: 5%;
+    padding-block-start: calc(var(--section-padding) + 50px);
+    background-color: var(--cultured);
+  }
+  .about-her .about-container {
+    display: grid;
+    gap: 50px;
+  }
+  .about-banner {
+    position: relative;
+    max-width: max-content;
+    margin-inline: auto;
+  }
+  .about-banner .about-100 {
+    mask-image: url("../images/Blob.svg");
+    -webkit-mask-image: url("../images/Blog.svg");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: auto;
+    -webkit-mask-size: auto;
+  }
+  .about-her-content { text-align: center; }
+  .about-her{ margin-block: 24px 36px; }
+  .project { border-block: 1px solid var(--cadet-blue-crayola_a20); }
+  .project .title-wrapper { margin-block-end: 40px; }
+  .project { margin-block-start: 24px; }
+  .project .grid-list-about { gap: 40px; }
+  .project-about-card {
+    --padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+    border-radius: var(--radius-8);
+    overflow: hidden;
+  }
+  .project-about-card-1,
+  .project-about-card-2,
+  :is(.project-about-card-3, .project-about-card-4) .about-card-content { padding: var(--padding); }
+  .project-about-card-1 { padding-block-end: 0; }
+  .project :is(.project-about-card-3, .project-about-card-4) { gap: 0; }
+  .project-about-card .about-card-tag {
+    font-size: var(--fs-8);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+  }
+  .project-about-card .about-card-title { margin-block: 16px; }
+  .project-about-card .about-card-text { margin-block-end: 20px; }
+  .project-about-card .btn-about-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: var(--fw-700);
+    transition: var(--transition-1);
+  }
+  .project-about-card .btn-about-text:is(:hover, :focus-visible) { gap: 10px; }
+  @media (min-width: 575px) {
+    .about-container {
+      max-width: 540px;
+      width: 100%;
+      margin-inline: auto;
+    }
+    .project-about-card { --padding: 68px; }
+  }
+  @media (min-width: 768px) {
+   .about-container { max-width: 720px; }
+    .project .title-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+    .project { min-width: max-content; }
+  @media (min-width: 992px) {
+  
+    :root {
+  
+      --section-padding: 120px;
+  
+    }
+  
+    .about-container { max-width: 960px; }
+  
+    .about-her { padding-block-start: calc(var(--section-padding) + 80px); }
+  
+    .about-her .about-container {
+      grid-template-columns: 0.8fr 1fr;
+      align-items: center;
+      gap: 100px;
+    }
+  
+    .about-her-content { text-align: left; }
+  
+    .about-her .btn-about-wrapper { justify-content: flex-start; }
+  
+    .project .grid-list-about {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 50px;
+    }
+  
+    .project .grid-list-about > li:nth-child(-n+2) { grid-column: 1 / 3; }
+  
+    .project-about-card-1,
+    .project-about-card-2 {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  
+    :is(.project-about-card-1, .project-about-card-2) .about-card-content { width: 33.33%; }
+  
+    :is(.project-about-card-1, .project-about-card-2) .about-card-banner { width: 66.66%; }
+  
+    .project-about-card-1 .about-card-content { padding-block-end: var(--padding); }
+  
+    .project-about-card-2 .about-card-content { order: 1; }
+  }
+  
+  
+  @media (min-width: 1200px) {
+  
+    .about-container{ max-width: 1140px; }
+  
+  }
+  
+  @media (min-width: 1400px) {
+  
+    .about-container{ max-width: 1320px; }
+  
+    .about-her .about-container { grid-template-columns: 1fr 0.8fr; }
+  
+    .about-her{ --fs-5: 2.4rem; }
+  
+  }}
